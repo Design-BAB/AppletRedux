@@ -1,0 +1,5 @@
+com\BryanBecerra\AppletRedux\enums\Status.class
+com\BryanBecerra\AppletRedux\AppletReduxApplication.class
+com\BryanBecerra\AppletRedux\WebController.class
+com\BryanBecerra\AppletRedux\sayHello.class
+com\BryanBecerra\AppletRedux\houseBuilding.class

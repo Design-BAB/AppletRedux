@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+      <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" 
+          integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+          crossorigin="anonymous"></script>
+      <style>
+          .house{
+              position: relative;
+              top: 10px;
+              z-index: 1;
+          }
+          .window{
+              position: relative;
+              z-index: 2;
+          }
+      </style>
+</head>
+<body>
+    <img class="house" src="house.jpg">
+    <a class="window" hx-post="/window" hx-vals='{"whichOne":1}'><img src="windowOpen.png"></a>
+    <a hx-post="/door"><img src="doorOpen.png" style="width:10%"></a>
+</body>
+</html>
