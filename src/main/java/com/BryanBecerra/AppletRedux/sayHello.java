@@ -12,7 +12,7 @@ public class sayHello {
     
     public String now() {
         var theWord = new StringBuilder();
-        var openingTag = "<h1 id=\"hello\" style=\"position:absolute; left:" + x + "px; top:" + y + "px\">";
+        var openingTag = "<h1 style=\"position:absolute; left:" + x + "px; top:" + y + "px;\">";
         theWord.append(openingTag);
         theWord.append("Hello");
         theWord.append("</h1>");

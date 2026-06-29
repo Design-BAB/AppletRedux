@@ -6,19 +6,39 @@
           crossorigin="anonymous"></script>
       <style>
           .house{
-              position: relative;
+              position:absolute;
               top: 10px;
-              z-index: 1;
+              z-index: -1;
           }
-          .window{
-              position: relative;
+          
+          .door{
+              position:absolute;
+              top: 870px;
+              left: 565px;
+              z-index: 3;
+          }
+          
+          .window0{
+              position:absolute;
+              left: -427px;
               z-index: 2;
+          
+          .window1{
+              position:absolute;
+              z-index: 3;
           }
       </style>
 </head>
 <body>
     <img class="house" src="house.jpg">
-    <a class="window" hx-post="/window" hx-vals='{"whichOne":1}'><img src="windowOpen.png"></a>
-    <a hx-post="/door"><img src="doorOpen.png" style="width:10%"></a>
+    <a class="window0" hx-post="/window" hx-vals='{"whichOne":0}'>
+        <img src="windowOpen.png">
+    </a>
+    <a class="window1" hx-post="/window" hx-vals='{"whichOne":1}'>
+        <img src="windowOpen.png">
+    </a>
+    <a class="door" hx-post="/door">
+        <img src="doorOpen.png">
+    </a>
 </body>
 </html>

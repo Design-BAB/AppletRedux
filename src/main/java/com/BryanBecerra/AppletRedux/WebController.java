@@ -13,11 +13,11 @@ import com.BryanBecerra.AppletRedux.enums.Status;
 @Controller
 public class WebController {
     
-    private houseBuilding home = new houseBuilding();
+    final private houseBuilding home = new houseBuilding();
     
     @GetMapping("/")
     public String index() {
-        return "House";
+        return "followMe";
     }
 
     @PostMapping("/mouseMove")
@@ -30,14 +30,12 @@ public class WebController {
     @PostMapping("/door")
     @ResponseBody
     public String door() {
-        home.setDoor();
         return home.getDoor();
     }
     
     @PostMapping("/window")
     @ResponseBody
     public String window(@RequestParam Integer whichOne) {
-        home.setWindow(whichOne);
         return home.getWindow(whichOne);
     }
     

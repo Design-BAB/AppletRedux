@@ -18,40 +18,36 @@ public class houseBuilding {
         this.windows[0] = Status.OPEN;
         this.windows[1] = Status.OPEN;
     }
-
-    public void setDoor() {
+    
+    public String getDoor(){
+        //first we set the door
         if (door == Status.OPEN) { 
             door = Status.CLOSED;
         } else {
             door = Status.OPEN;
         }
-    }
-    
-    public String getDoor(){
+        //then return it
         if (this.door == Status.OPEN) {
-            return "<a hx-post=\"/door\"><img src=\"doorOpen.png\" style=\"width:10%\"></a>";
+            return "<img src=\"doorOpen.png\">";
         } else {
-            return "<a hx-post=\"/door\"><img src=\"doorClosed.png\" style=\"width:10%\"></a>";
+            return "<img src=\"doorClosed.png\">";
         }
     }
-
-    public void setWindow(int whichOne) {
+    
+    public String getWindow(int whichOne){
+        //first we set the window
         if (windows[whichOne] == Status.OPEN) { 
             this.windows[whichOne] = Status.CLOSED;
         } else {
             this.windows[whichOne] = Status.OPEN;
         }
-    }
-    
-    public String getWindow(int whichOne){
+        //then we return it
         if (this.windows[whichOne] == Status.OPEN) {
-            return "<a hx-post=\"/window\" hx-vals='{\"whichOne\":\"1\"}'><img src=\"windowOpen.png\"></a>";
+            return "<img src=\"windowOpen.png\">";
         } else {
-            return "<a hx-post=\"/window\" hx-vals='{\"whichOne\":\"1\"}'><img src=\"windowClosed.png\"></a>";
+            return "<img src=\"windowClosed.png\">";
         }
     }
-    
-    
 
     @Override
     public String toString() {

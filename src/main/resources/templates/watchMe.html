@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Watch Me Exercise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/hyperscript.org@0.9.93/dist/_hyperscript.min.js" integrity="sha384-/6HsqTiz02YfFBUhzTwlH/yxe68DhfnkdHiWytM3nxAzs/yvG+3FZY0f4KLnNoov" crossorigin="anonymous"></script>
+        <script type="text/hyperscript">
+            def moveToMousePos(x, y)
+                return "position:absolute; left:" + x + "px; top:" + y + "px;"
+            end
+</script>
+    </head>
+    <body>
+        <div style="width: 50%; height: 50%; border: 2px solid grey;"> <h1
+          _="on mousemove
+                set @style to moveToMousePos(event.clientX, event.clientY)
+           ">
+            Hello</h1></div>
+    </body>
+</html>
