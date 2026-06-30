@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.BryanBecerra.AppletRedux.enums.Status;
 
-
 @Controller
 public class WebController {
     
     final private houseBuilding home = new houseBuilding();
+    final int sizeOfThermometer = 23;
     
     @GetMapping("/")
     public String index() {
-        return "followMe";
+        return "Thermo";
     }
 
     @PostMapping("/mouseMove")
@@ -37,6 +37,13 @@ public class WebController {
     @ResponseBody
     public String window(@RequestParam Integer whichOne) {
         return home.getWindow(whichOne);
+    }
+    
+    @PostMapping("/changeThermo")
+    @ResponseBody
+    public String changeThermo(@RequestParam Integer temp) {
+        //temp = sizeOfThermometer + temp;
+        return "<div id=\"result\" class=\"mercury\" style=\"height: " + temp + "px\"></div>";
     }
     
 }
