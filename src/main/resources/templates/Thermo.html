@@ -4,44 +4,13 @@
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" 
         integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sakura.css">
     <style>
         body {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
-        }
-
-        /* Wrapper that gives both children a shared stacking context */
-        .thermo-container {
-            position: relative;
-            width: 388px;
-            height: 900px;
-        }
-
-        /* Red mercury column — sits INSIDE the tube, behind the PNG */
-        .mercury {
-            position: absolute;
-            background-color: #cc3a47;
-            bottom: 275px;
-            left: 140px;
-            width: 110px;
-            z-index: 1;
-        }
-
-        /* Thermometer PNG — transparent tube lets mercury show through */
-        .meter {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 388px;
-            height: 900px;
-            z-index: 2;
-        }
-
-        .slider {
-            width: 300px;
-            cursor: pointer;
         }
     </style>
 </head>
